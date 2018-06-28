@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js</title>
+</head>
+<body>
+
+<div id="app">
+	<div class="image_container">
+		<img v-bind:src="image" v-bind:alt="desc">
+	</div>
+	<h1>{{product}}</h1>
+	<p v-if="inStock">In Stock</p>
+	<p v-else="inStock">Out of Stock</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

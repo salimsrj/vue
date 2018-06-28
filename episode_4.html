@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Episode _1 </title>
+</head>
+<body>
+<div id="test_1">
+	<input type="text" name="message" v-model="message">
+	<p >The Message is - {{ message }}</p>
+
+	<ul>
+		<li v-for="name in names" v-text="name"></li>
+	</ul>
+
+	<input type="text" name="name" id="add_name" v-model="add_new_name">
+	<button @click="addName" id="button">Add Name</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#test_1',
+		data: {
+			add_new_name: '',
+			message: "This is test message",
+			names:['salim', 'mahmudul', 'hasan']
+		},
+		methods:{
+			addName(){
+				this.names.push(this.add_new_name);
+				this.add_new_name = '';
+			}
+		}
+	});
+
+
+</script>
+</body>
+</html>
